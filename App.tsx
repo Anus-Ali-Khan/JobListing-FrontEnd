@@ -1,12 +1,14 @@
 import React from 'react';
 import {View, Text, SafeAreaView, StyleSheet, ScrollView} from 'react-native';
-import Navbar from './components/Navbar';
+import Navbar from './src/components/Navbar';
+import PostCards from './src/components/PostCards';
 
 const App = () => {
   return (
-    <SafeAreaView style={styles.container}>
+    <SafeAreaView>
       <ScrollView>
         <Navbar />
+        <PostCards />
       </ScrollView>
     </SafeAreaView>
   );
