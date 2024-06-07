@@ -1,11 +1,16 @@
-import {StyleSheet, Text, View} from 'react-native';
 import React from 'react';
+import {View, Text, SafeAreaView, StyleSheet, ScrollView} from 'react-native';
+import Navbar from '../components/Navbar';
+import PostCards from '../components/PostCards';
 
 const Home = () => {
   return (
-    <View>
-      <Text>Home</Text>
-    </View>
+    <SafeAreaView>
+      <ScrollView>
+        <Navbar />
+        <PostCards />
+      </ScrollView>
+    </SafeAreaView>
   );
 };
 

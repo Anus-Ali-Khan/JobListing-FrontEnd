@@ -1,23 +1,13 @@
 import React from 'react';
-import {View, Text, SafeAreaView, StyleSheet, ScrollView} from 'react-native';
-import Navbar from './src/components/Navbar';
-import PostCards from './src/components/PostCards';
+import {NavigationContainer} from '@react-navigation/native';
+import TabNavigation from './src/components/TabNavigation';
 
 const App = () => {
   return (
-    <SafeAreaView>
-      <ScrollView>
-        <Navbar />
-        <PostCards />
-      </ScrollView>
-    </SafeAreaView>
+    <NavigationContainer>
+      <TabNavigation />
+    </NavigationContainer>
   );
 };
 
 export default App;
-
-const styles = StyleSheet.create({
-  container: {
-    backgroundColor: 'coral',
-  },
-});
