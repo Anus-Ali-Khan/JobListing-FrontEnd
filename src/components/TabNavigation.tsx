@@ -49,7 +49,7 @@ const TabNavigation = () => {
         }}
       />
       <Tab.Screen
-        name="CreatePost"
+        name="Create Post"
         component={CreatePost}
         options={{
           tabBarIcon: ({focused}) => {
