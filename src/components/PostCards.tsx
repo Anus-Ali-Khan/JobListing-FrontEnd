@@ -1,7 +1,22 @@
-import {StyleSheet, Text, View} from 'react-native';
-import React from 'react';
+import {FlatList, StyleSheet, Text, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
+import ApiService from '../apiService';
 
 const PostCards = () => {
+  const [posts, setPosts] = useState([]);
+
+  const getJobPosts = async () => {
+    const api = new ApiService();
+    const data = await api.get('/posts');
+    setPosts(data);
+  };
+
+  console.log(posts);
+
+  useEffect(() => {
+    getJobPosts();
+  }, []);
+
   return (
     <View style={styles.container}>
       <Text style={styles.headingText}>Job Matches Your Interest</Text>

@@ -73,7 +73,7 @@ const ReactHookForm = () => {
         name="description"
       />
       <View>
-        <Text style={styles.text}>Please Select requires skills</Text>
+        <Text style={styles.text}>Please Select required skills</Text>
         <View style={styles.checkBox}>
           <Controller
             control={control}
